@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,26 +9,28 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Marcellus&family=Unbounded:wght@200..900&display=swap"
-        rel="stylesheet"><!-- loco -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-
-  <script type="module" crossorigin src="/assets/index-BtL2Qh_c.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-D6q2t99x.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Marcellus&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <!-- loco -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <!-- shery css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aayushchouhan24/sheryjs@main/dist/Shery.css" />
+    <!-- custom css -->
+  <script type="module" crossorigin src="/assets/index-33N9bDFp.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CLYyKV2a.css">
 </head>
 
 <body>
-    <main>
+    <main class="bg-purple-500 overflow-x-hidden">
         <!-- sec1 -->
         <section id="sec1" class="h-screen w-full items-center justify-center flex flex-col">
-            <h1 class="text-center font-light text-[10vw]">MARIS GINA</h1>
-            <h6 class="text-center font-extralight text-[4vw]">Skin care in Japan</h6>
+            <h1 id="head" class="text-center font-light text-[10vw]">MARIS GINA</h1>
+            <h6 id="tagline" class="text-center font-extralight text-[4vw]">Skin care in Japan</h6>
         </section>
 
         <!-- sec2 -->
-        <section id="sec2" class="h-[50vh] w-full bg-purple-500 flex items-center justify-around md:h-[80vh] p-2">
-            <img class="hidden xl:flex h-[50vh]"
+        <section id="sec2" data-scroll data-scroll-speed="1"
+            class="h-[50vh] w-full bg-purple-500 flex items-center justify-around md:h-[80vh] p-2">
+            <img class="target hidden xl:flex h-[50vh]"
                 src="https://cdn.prod.website-files.com/6753575de0caac9593155ecd/6753575de0caac9593155f09_AP-LiberateYourSkin-Beach-5%201.avif"
                 alt="">
             <div class="w-[40vh] ">
@@ -39,25 +40,25 @@
                     care, catering to discerning clients who value excellence. With services tailored to individual
                     needs, we offer a premier salon experience that sets us apart in Japan.</p>
             </div>
-            <img class="h-[30vh]"
+            <img class="magnet h-[30vh]"
                 src="https://cdn.prod.website-files.com/6753575de0caac9593155ecd/6753575de0caac9593155edf_AP-LiberateYourSkin-BeachBikini-1.avif"
                 alt="">
         </section>
 
         <!-- sec3 -->
-        <section class="min-h-screen w-full flex flex-col sm:flex-row">
-            <img class="object-cover h-[70vh] sm:w-[50vw] sm:h-[90vh]"
+        <section data-scroll data-scroll-speed="1.5" class="min-h-screen w-full flex flex-col sm:flex-row">
+            <img class="img object-cover h-[70vh] sm:w-[50vw] sm:h-[90vh]"
                 src="https://cdn.prod.website-files.com/6753575de0caac9593155ecd/675561ba6b2f0e11a1ccef4e_MarisGina-Homepage-General-1.webp"
                 alt="">
-            <img class="object-cover h-[70vh] sm:w-[50vw] sm:h-[90vh]"
+            <img class="img object-cover h-[70vh] sm:w-[50vw] sm:h-[90vh]"
                 src="https://cdn.prod.website-files.com/6753575de0caac9593155ecd/675561f5a664c06ea314cb20_MarisGina-Homepage-General-2.webp"
                 alt="">
         </section>
 
         <!-- sec4 -->
-        <section id="sec4" class="relative h-[90vh] w-full flex flex-col items-center justify-between sm:min-h-[150vh]">
+        <section id="sec4" class="relative h-[90vh] w-full flex flex-col items-center justify-between sm:min-h-[150vh] md:justify-between">
             <div
-                class="w-full flex flex-col items-center justify-center sm:flex-row sm:justify-around md:w-[60%] mx-auto">
+                class=" w-full flex flex-col items-center justify-center sm:flex-row sm:justify-around md:w-[90%] mx-auto md:justify-between xl:w-[60%]">
                 <img class="hidden sm:flex h-[60%]"
                     src="https://cdn.prod.website-files.com/6753575de0caac9593155ecd/6753575de0caac9593155eed_AP-Pregnant-Model%206.avif"
                     alt="">
@@ -81,7 +82,7 @@
         </section>
 
         <!-- sec5 -->
-        <section id="sec5" class="min-h-screen w-full bg-purple-500 sm:hidden"></section>
+        <section id="sec5" class="min-h-screen w-full bg-purple-500 py-3 mt-3 sm:hidden"></section>
 
         <!-- sec6 (pc version) -->
         <section id="sec6" class="hidden sm:flex w-full h-screen relative">
@@ -89,8 +90,7 @@
                 src="https://cdn.prod.website-files.com/6753575de0caac9593155ecd/6753575de0caac9593155f01_maris-gina-services-circle.svg"
                 alt="">
 
-            <i
-                class="z-50 text-[5vh] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-white ri-gemini-fill"></i>
+            <i  class="z-50 text-[5vh] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-white ri-gemini-fill"></i>
 
 
             <div class="h-full w-[50%] bg-purple-500 relative flex flex-col items-center justify-center">
@@ -151,7 +151,7 @@
 
         <!-- sec7 -->
         <section
-            class="relative h-[120vh] py-[8vh] flex flex-col items-center justify-around md:flex-row md:h-screen w-full ">
+            class="bg-white relative h-[120vh] py-[8vh] flex flex-col items-center justify-around md:flex-row md:h-screen w-full ">
             <img class="w-[80%] h-[40%] object-cover md:absolute top-20 left-[10vw] md:h-[40vh] md:w-[35vh] "
                 src="https://cdn.prod.website-files.com/6753575de0caac9593155ecd/6753575de0caac9593155f0e_young-model-with-vitiligo-standing-in-beige-top-br-2023-11-27-05-12-48-utc%202.avif"
                 alt="">
@@ -189,11 +189,12 @@
         </section>
 
         <!-- sec9 -->
-        <section class="py-10 h-[80vh] w-full flex flex-col items-center text-slate-500">
+        <section class="bg-white py-10 h-[80vh] w-full flex flex-col items-center text-slate-500">
             <h6>Blog Posts</h6>
             <h2>Latest News</h2>
 
-            <div id="seccards" class="w-full min-h-[60vh] flex flex-row items-center justify-evenly overflow-y-scroll ">
+            <div id="seccards"
+                class=" w-full min-h-[60vh] flex flex-row items-center justify-evenly overflow-y-scroll ">
             </div>
         </section>
 
@@ -205,24 +206,25 @@
         </section>
 
         <section class="bg-purple-500 h-[20vh] mt-2 w-full text-white flex items-center justify-center">
-            <h6 class="text-[2vh]">2024. @Devprodigy - All Copyrights Reserved </h6>
+            <h6 class="text-[1.2vh] px-2 text-center">2024. @Devprodigy - All Copyrights Reserved </h6>
         </section>
 
     </main>
 
-    <!--  -->
-
+ 
     <!-- loco -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <!-- gsap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- scrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- custom js -->
+    <!--  Gsap is needed for Basic Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- Scroll Trigger is needed for Scroll Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Three.js is needed for 3d Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <!-- ControlKit is needed for Debug Panel -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <!-- shery js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/aayushchouhan24/sheryjs@main/dist/Shery.js"></script>
+    <!-- custom js -->
 </body>
 
 </html>
