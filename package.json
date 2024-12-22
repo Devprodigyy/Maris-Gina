@@ -1,0 +1,20 @@
+{
+  "name": "maris-gina",
+  "version": "1.0.0",
+  "description": "Original : https://marisgina.webflow.io/",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite",
+    "build":"vite build",
+    "serve":"vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.0.5"
+  }
+}

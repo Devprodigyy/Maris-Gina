@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-family: "Unbounded", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.cursive {
+    font-family: "Dancing Script", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+#sec1 {
+    background-image: url("https://cdn.prod.website-files.com/6753575de0caac9593155ecd/67556141aff1544bb10c9db7_MarisGina-Homepage-Main.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#sec4{
+    background-color: #FEFEFE;
+}
+
+#sec8{
+    background-image: url("https://cdn.prod.website-files.com/6753575de0caac9593155ecd/67556430d23c6b347894a0c9_MarisGina-Homepage-Program.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#sec10{
+    overflow: hidden;
+    background-image: url("https://cdn.prod.website-files.com/6753575de0caac9593155ecd/6754e0dd87acf923815af6c5_MG%20footer.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+   
+
+}
+
+#seccards::-webkit-scrollbar{
+ display: none;   
+}
