@@ -12,23 +12,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Marcellus&family=Unbounded:wght@200..900&display=swap"
-        rel="stylesheet"><!-- loco -->
+        rel="stylesheet">
+    <!-- loco -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <!-- shery css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aayushchouhan24/sheryjs@main/dist/Shery.css" />
     <link rel="stylesheet" href="./style.css">
 
 </head>
 
 <body>
-    <main class="overflow-x-hidden">
+    <main class="bg-purple-500 overflow-x-hidden">
         <!-- sec1 -->
         <section id="sec1" class="h-screen w-full items-center justify-center flex flex-col">
-            <h1 class="text-center font-light text-[10vw]">MARIS GINA</h1>
-            <h6 class="text-center font-extralight text-[4vw]">Skin care in Japan</h6>
+            <h1 id="head" class="text-center font-light text-[10vw]">MARIS GINA</h1>
+            <h6 id="tagline" class="text-center font-extralight text-[4vw]">Skin care in Japan</h6>
         </section>
 
         <!-- sec2 -->
-        <section id="sec2" class="h-[50vh] w-full bg-purple-500 flex items-center justify-around md:h-[80vh] p-2">
-            <img class="hidden xl:flex h-[50vh]"
+        <section id="sec2" data-scroll data-scroll-speed="1"
+            class="h-[50vh] w-full bg-purple-500 flex items-center justify-around md:h-[80vh] p-2">
+            <img class="target hidden xl:flex h-[50vh]"
                 src="https://cdn.prod.website-files.com/6753575de0caac9593155ecd/6753575de0caac9593155f09_AP-LiberateYourSkin-Beach-5%201.avif"
                 alt="">
             <div class="w-[40vh] ">
@@ -44,7 +48,7 @@
         </section>
 
         <!-- sec3 -->
-        <section class="min-h-screen w-full flex flex-col sm:flex-row">
+        <section data-scroll data-scroll-speed="1.5" class="min-h-screen w-full flex flex-col sm:flex-row">
             <img class="object-cover h-[70vh] sm:w-[50vw] sm:h-[90vh]"
                 src="https://cdn.prod.website-files.com/6753575de0caac9593155ecd/675561ba6b2f0e11a1ccef4e_MarisGina-Homepage-General-1.webp"
                 alt="">
@@ -150,7 +154,7 @@
 
         <!-- sec7 -->
         <section
-            class="relative h-[120vh] py-[8vh] flex flex-col items-center justify-around md:flex-row md:h-screen w-full ">
+            class="bg-white relative h-[120vh] py-[8vh] flex flex-col items-center justify-around md:flex-row md:h-screen w-full ">
             <img class="w-[80%] h-[40%] object-cover md:absolute top-20 left-[10vw] md:h-[40vh] md:w-[35vh] "
                 src="https://cdn.prod.website-files.com/6753575de0caac9593155ecd/6753575de0caac9593155f0e_young-model-with-vitiligo-standing-in-beige-top-br-2023-11-27-05-12-48-utc%202.avif"
                 alt="">
@@ -188,11 +192,12 @@
         </section>
 
         <!-- sec9 -->
-        <section class="py-10 h-[80vh] w-full flex flex-col items-center text-slate-500">
+        <section class="bg-white py-10 h-[80vh] w-full flex flex-col items-center text-slate-500">
             <h6>Blog Posts</h6>
             <h2>Latest News</h2>
 
-            <div id="seccards" class="w-full min-h-[60vh] flex flex-row items-center justify-evenly overflow-y-scroll ">
+            <div id="seccards"
+                class=" w-full min-h-[60vh] flex flex-row items-center justify-evenly overflow-y-scroll ">
             </div>
         </section>
 
@@ -209,20 +214,23 @@
 
     </main>
 
-    <!--  -->
-
+ 
     <!-- loco -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <!-- gsap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- scrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--  Gsap is needed for Basic Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- Scroll Trigger is needed for Scroll Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Three.js is needed for 3d Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <!-- ControlKit is needed for Debug Panel -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <!-- shery js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/aayushchouhan24/sheryjs@main/dist/Shery.js"></script>
     <!-- custom js -->
     <script type="module" src="./script.js"></script>
+    <script type="module" src="./gsap.js"></script>
+    <script type="module" src="./shery.js"></script>
 </body>
 
 </html>

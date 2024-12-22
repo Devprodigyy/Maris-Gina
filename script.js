@@ -7,7 +7,7 @@ function loco() {
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector("main"),
     smooth: true,
-    lerp:0.010,
+    lerp:0.05,
   });
   // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
   locoScroll.on("scroll", ScrollTrigger.update);
@@ -121,7 +121,7 @@ var cards = [
 ];
 
 var seccards = document.querySelector("#seccards");
-cards.forEach((itemm)=>{
+cards.forEach((itemm) => {
   var div = document.createElement("div");
   div.innerHTML = `
    <div class="w-[300px] h-full p-4 flex flex-col items-center justify-start ">
