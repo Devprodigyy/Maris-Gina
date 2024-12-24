@@ -7,7 +7,7 @@ function loco() {
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector("main"),
     smooth: true,
-    lerp:0.05,
+    lerp: 0.05,
   });
   // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
   locoScroll.on("scroll", ScrollTrigger.update);
@@ -133,4 +133,59 @@ cards.forEach((itemm) => {
   `;
 
   seccards.appendChild(div);
+})
+
+
+
+let mm = gsap.matchMedia();
+
+mm.add("(min-width: 800px)", () => {
+  gsap.from("#head", {
+    scale: 0.1,
+    opacity: 0.1,
+    duration: 1.2,
+    ease: "linear",
+    // delay:1
+    lerp: 1,
+  })
+
+
+  gsap.from("#tagline", {
+    opacity: 0,
+    delay: 1.4
+  })
+
+});
+
+mm.add("(max-width: 799px)", () => {
+  // mobile setup code here...
+});
+
+
+gsap.to("#centerCircle", {
+  rotate: 360,
+  repeat: -1,
+  duration: 10,
+  ease: "linear",
+})
+
+
+gsap.to("#centerStar", {
+  rotate: -360,
+  repeat: -1,
+  duration: 10,
+  ease: "linear",
+})
+
+gsap.to("#sec6", {
+  top: 0,
+  scrollTrigger: {
+    trigger: "#sec6",
+    scroller: "main",
+    start: "0% 0%",
+    end: "bottom -100%",
+    // markers: true,
+    scrub: true,
+    pin: true,
+  }
 })
